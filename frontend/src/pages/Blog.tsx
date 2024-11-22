@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import { Appbar } from "../components/Appbar";
-import { BlogCard } from "../components/BlogCard";
 import { useBlog } from "../hooks";
 import { FullBlog } from "../components/FullBlog";
 import { BlogSkeleton } from "../components/BlogSkeleton";
@@ -26,7 +24,7 @@ export const Blog = () => {
     }
     
         return <div>
-            <FullBlog blog={blog} />
+            <FullBlog blog = {blog!} />
         </div>
  
       

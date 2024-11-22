@@ -2,7 +2,7 @@ import axios from "axios";
 import { Appbar } from "../components/Appbar"
 import { BACKEND_URL } from "../configg";
 import { ChangeEvent, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Publish = () => {
     const [title, setTitle] = useState("")
@@ -47,14 +47,14 @@ return <div> <Appbar/>
 }
 
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 function TextEditor({ onChange }: { onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void}) {
     return (
         <form className="pt-8   rounded-lg ">
           <div className="px-4 py-2  rounded-lg">
             <label htmlFor="editor" className="sr-only">Publish post</label>
             <textarea onChange={onChange}
-              rows="8"
+              
               className=" focus:outline-none block w-full px-3 py-2 text-sm text-gray-800 bg-white border border-gray-300 rounded-lg "
               placeholder="Write an article..."
               required
